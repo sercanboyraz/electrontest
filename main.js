@@ -109,7 +109,7 @@ app.on('ready', () => {
       nodeIntegration: true,
       webviewTag: true,
       zoomFactor: 1.0,
-      blinkFeatures: 'OverlayScrollbars'
+      blinkFeatures: 'OverlayScrollbars' 
     },
     // fullscreenable: true,
     // simpleFullscreen: true,

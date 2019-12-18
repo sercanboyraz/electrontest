@@ -21,5 +21,10 @@
   "devDependencies": {
     "electron": "^7.1.1",
     "electron-installer-dmg": "^3.0.0"
+  },
+  "build": {
+    "win": {
+      "publish": ["github", "bintray"]
+    }
   }
 }
