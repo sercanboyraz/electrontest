@@ -54,6 +54,15 @@ function milliPiyangoButton() {
  };
 }
 
+
+function mackolikButton() {
+  document.querySelector('#mackolik').onclick = () => {
+   let attribute = document.getElementById('webview');
+   let home = attribute.getAttribute("data-home");
+   navigateTo("http://www.mackolik.com");
+ };
+}
+
 function print() {
   let webview = document.querySelector('webview');
   print_win = new BrowserWindow({'auto-hide-menu-bar':true});
