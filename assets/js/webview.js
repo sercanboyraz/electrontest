@@ -9,6 +9,7 @@ onload = () => {
   milliPiyangoButton();
   homeButton();
   printButton();
+  mackolikButton();
 };
 
 function doLayout() {
