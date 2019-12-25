@@ -38,7 +38,6 @@ function milliPiyangoButton() {
   };
 }
 
-<<<<<<< HEAD
 function mackolikButton() {
   document.querySelector('#mackolik').onclick = () => {
     navigateTo("http://www.mackolik.com");
@@ -50,22 +49,3 @@ function iddaatvbutton() {
     navigateTo("http://iddaatv.iddaa.com.tr/");
   };
 }
-=======
-
-function mackolikButton() {
-  document.querySelector('#mackolik').onclick = () => {
-   let attribute = document.getElementById('webview');
-   let home = attribute.getAttribute("data-home");
-   navigateTo("http://www.mackolik.com");
- };
-}
-
-function print() {
-  let webview = document.querySelector('webview');
-  print_win = new BrowserWindow({'auto-hide-menu-bar':true});
-  print_win.loadURL(webview.src);
-  print_win.webContents.on('did-finish-load', () => {
-    print_win.webContents.print();
-  });
-}
->>>>>>> 795ced2215a7ac011cd1a8f0b812b2de3c543ca1
