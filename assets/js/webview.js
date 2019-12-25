@@ -7,8 +7,14 @@ onload = () => {
   sahadanButton();
   nesineButton();
   milliPiyangoButton();
+<<<<<<< HEAD
   mackolikButton();
   iddaatvbutton();
+=======
+  homeButton();
+  printButton();
+  mackolikButton();
+>>>>>>> 795ced2215a7ac011cd1a8f0b812b2de3c543ca1
 };
 
 function doLayout() {
