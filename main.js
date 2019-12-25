@@ -146,9 +146,9 @@ app.on('ready', () => {
   // });
 
   const menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(menu);
+  Menu.setApplicationMenu(null);
 
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 });
 
 // Quit when all windows are closed.
