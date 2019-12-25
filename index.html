@@ -7,6 +7,16 @@
     <script src="assets/js/webview.js"></script>
     <script src="assets/js/topbar.js"></script>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" />
+
+    <script>
+        window.onload = function () {
+            if (!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload();
+            }
+        }
+    </script>
+
 </head>
 
 <body>
