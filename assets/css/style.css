@@ -126,7 +126,7 @@ html, body {
   transition-delay: 400ms;
 }
 .main-head:hover .head-nav span {
-  text-indent: 0;
+  text-indent: 1em;
   font-family: cursive;
 }
 @media screen and (max: 768px) {

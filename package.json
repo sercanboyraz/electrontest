@@ -24,7 +24,10 @@
   },
   "build": {
     "win": {
-      "publish": ["github", "bintray"]
+      "publish": [
+        "github",
+        "bintray"
+      ]
     }
   }
 }

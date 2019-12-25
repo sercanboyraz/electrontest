@@ -1,5 +1,5 @@
-const {remote} = require('electron');
-const {BrowserWindow} = remote;
+const { remote } = require('electron');
+const { BrowserWindow } = remote;
 let print_win;
 
 function navigateTo(url) {
@@ -14,51 +14,38 @@ function getControlsHeight() {
   return 0;
 }
 
-function homeButton() {
-   document.querySelector('#home').onclick = () => {
-    let attribute = document.getElementById('webview');
-    let home = attribute.getAttribute("data-home");
-    navigateTo(home);
-  };
-}
-
 function iddaaButton() {
   document.querySelector('#iddaa').onclick = () => {
-   let attribute = document.getElementById('webview');
-   let home = attribute.getAttribute("data-home");
-   navigateTo("https://www.iddaa.com");
- };
+    navigateTo("http://www.iddaa.com");
+  };
 }
 
 function nesineButton() {
   document.querySelector('#nesine').onclick = () => {
-   let attribute = document.getElementById('webview');
-   let home = attribute.getAttribute("data-home");
-   navigateTo("https://www.nesine.com");
- };
+    navigateTo("http://www.nesine.com");
+  };
 }
 
 function sahadanButton() {
   document.querySelector('#sahadan').onclick = () => {
-   let attribute = document.getElementById('webview');
-   let home = attribute.getAttribute("data-home");
-   navigateTo("https://www.sahadan.com");
- };
+    navigateTo("http://www.sahadan.com");
+  };
 }
 
 function milliPiyangoButton() {
   document.querySelector('#milliPiyango').onclick = () => {
-   let attribute = document.getElementById('webview');
-   let home = attribute.getAttribute("data-home");
-   navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_sayisal.php?&embedded=true");
- };
+    navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_sayisal.php");
+  };
 }
 
-function print() {
-  let webview = document.querySelector('webview');
-  print_win = new BrowserWindow({'auto-hide-menu-bar':true});
-  print_win.loadURL(webview.src);
-  print_win.webContents.on('did-finish-load', () => {
-    print_win.webContents.print();
-  });
+function mackolikButton() {
+  document.querySelector('#mackolik').onclick = () => {
+    navigateTo("http://www.mackolik.com");
+  };
+}
+
+function iddaatvbutton() {
+  document.querySelector('#iddaatv').onclick = () => {
+    navigateTo("http://iddaatv.iddaa.com.tr/");
+  };
 }

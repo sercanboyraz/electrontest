@@ -7,8 +7,8 @@ onload = () => {
   sahadanButton();
   nesineButton();
   milliPiyangoButton();
-  homeButton();
-  printButton();
+  mackolikButton();
+  iddaatvbutton();
 };
 
 function doLayout() {

@@ -109,7 +109,7 @@ app.on('ready', () => {
       nodeIntegration: true,
       webviewTag: true,
       zoomFactor: 1.0,
-      blinkFeatures: 'OverlayScrollbars' 
+      blinkFeatures: 'OverlayScrollbars'
     },
     // fullscreenable: true,
     // simpleFullscreen: true,
@@ -119,11 +119,35 @@ app.on('ready', () => {
 
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
-  // Display Dev Tools
-  //mainWindow.openDevTools();
+  // mainWindow.webContents.once('dom-ready', () => {
+  //   mainWindow.webContents.executeJavaScript("alert('Hello World!');")
+  //   mainWindow.webContents.executeJavaScript(` const form = document.querySelectorAll('header-login')[0];      alert(form);`)
+
+ 
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.executeJavaScript(` alert(document.querySelectorAll('header-login')[]);`)
+  })
+
+
+
+
+  // mainWindow.webContents.on("did-finish-load", () => {
+  //   mainWindow.webContents.executeJavaScript(` const form = document.querySelectorAll('header-login')[0];
+  //   alert(form);`); // <--- this does not execute with electron-3.0.0-beta.1
+  // });
+  //   mainWindow.webContents.on("did-finish-load", () => {
+  //     mainWindow.webContents.executeJavaScript(`alert("hello");`); // <--- this does not execute with electron-3.0.0-beta.1
+  // });
+  // process.once('document-start', () => {
+  //   var script = document.createElement('script');
+  //   script.textContent = 'navigator.geolocation.watchPosition = null;';
+  //   document.documentElement.appendChild(script);
+  // });
 
   const menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(menu);
+
+  mainWindow.webContents.openDevTools()
 });
 
 // Quit when all windows are closed.
