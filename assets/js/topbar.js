@@ -19,13 +19,13 @@ function iddaaButton() {
 
 function nesineButton() {
   document.querySelector('#nesine').onclick = () => {
-    navigateTo("http://www.nesine.com");
+    navigateTo("https://www.nesine.com/iddaa/canli-mac-sonuclari/futbol");
   };
 }
 
 function sahadanButton() {
   document.querySelector('#sahadan').onclick = () => {
-    navigateTo("http://www.sahadan.com");
+    navigateTo("https://www.sahadan.com/canli-sonuclar");
   };
 }
 
@@ -37,7 +37,7 @@ function milliPiyangoButton() {
 
 function mackolikButton() {
   document.querySelector('#mackolik').onclick = () => {
-    navigateTo("http://www.mackolik.com");
+    navigateTo("https://www.mackolik.com/canli-sonuclar");
   };
 }
 
