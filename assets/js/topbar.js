@@ -1,6 +1,3 @@
-const { remote } = require('electron');
-const { BrowserWindow } = remote;
-let print_win;
 
 function navigateTo(url) {
   document.querySelector('webview').src = url;

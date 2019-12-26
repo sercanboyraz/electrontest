@@ -6,16 +6,17 @@
     <!-- <link rel="stylesheet" href="assets/css/no-topbar.css"> -->
     <script src="assets/js/webview.js"></script>
     <script src="assets/js/topbar.js"></script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" /> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
 
-    <script>
+    <!-- <script>
         window.onload = function () {
             if (!window.location.hash) {
                 window.location = window.location + '#loaded';
                 window.location.reload();
             }
         }
-    </script>
+    </script> -->
 
 </head>
 
@@ -83,9 +84,14 @@
     </header> <!-- //main-head -->
 
     <div class="wrap-all-the-things">
-        <webview id="webview" src="https://www.iddaa.com" data-home="https://www.iddaa.com"
-            disableblinkfeatures="PreciseMemoryInfo, CSSVariables"></webview>
+        <webview id="webview" src="https://www.iddaa.com" preload="./preload.js"  data-home="https://www.iddaa.com" ></webview>
     </div>
+    <script>
+        var webview = document.getElementById('webview');
+        webview.addEventListener('dom-ready', function () {
+            webview.insertCSS(".loggedOut,.admatic_interstitial_iframe_content_main,.page-homepage-index__container-widget,.page-homepage-index__container-widget--social-posts,.widget-footer,.widget-nesine-most-played-coupons,.widget-nesine-most-played-coupons--desktop,.logos,.widget,.footer-nav,.footer-links,[class^='Stage_Rectangle'],.widget-legacy-link-banner,.widget-social-post__follow-button,.adform-adbox,.admatic_interstitial_logo_area_span,iframe,.c,.b,.a,.medyanet-ad-models-pageskin,.mpu,.userbox,.lgnform { display: none !important}")
+        });
+    </script>
 </body>
 
 </html>

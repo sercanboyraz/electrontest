@@ -106,10 +106,12 @@ app.on('ready', () => {
     titleBarStyle: 'hidden',
     backgroundColor: '#fff',
     webPreferences: {
-      nodeIntegration: true,
+      // nodeIntegration: true,
       webviewTag: true,
       zoomFactor: 1.0,
-      blinkFeatures: 'OverlayScrollbars'
+      blinkFeatures: 'OverlayScrollbars',
+      nodeIntegration: false,
+      preload: path.join(__dirname, 'renderer.js'),
     },
     // fullscreenable: true,
     // simpleFullscreen: true,
@@ -117,8 +119,8 @@ app.on('ready', () => {
     focusable: true
   });
 
-  // mainWindow.loadURL('file://' + __dirname + '/index.html');
-  mainWindow.loadURL('https://sercanboyraz.github.io/ss/');
+  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  // mainWindow.loadURL('https://sercanboyraz.github.io/ss/');
 
   // mainWindow.webContents.once('dom-ready', () => {
   //   mainWindow.webContents.executeJavaScript("alert('Hello World!');")
@@ -126,7 +128,7 @@ app.on('ready', () => {
 
  
   mainWindow.webContents.on('did-finish-load', () => {
-    mainWindow.webContents.executeJavaScript(` alert(document.querySelectorAll('header-login')[]);`)
+    mainWindow.webContents.executeJavaScript(` alert(document.querySelectorAll('header-login'));`)
   })
 
 
@@ -146,9 +148,9 @@ app.on('ready', () => {
   // });
 
   const menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(menu);
 
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 });
 
 // Quit when all windows are closed.

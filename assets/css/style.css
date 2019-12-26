@@ -10,11 +10,6 @@ body {
 @font-face {
   font-family: 'Roboto';
   src: url('font.eot'); /* IE9 Compat Modes */
-  src: url('font.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('font.woff2') format('woff2'), /* Super Modern Browsers */
-       url('font.woff') format('woff'), /* Pretty Modern Browsers */
-       url('font.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('font.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 html, body {
   margin: 0;
@@ -156,13 +151,7 @@ html, body {
   /* padding-left: 140px; */
   margin-top: 0;
   margin-left: 83px;
-  background-image: url(https://download.unsplash.com/photo-1428976365951-b70e0fa5c551);
   background-size: cover;
   background-position: center center;
   transition: transform 400ms, opacity 400ms;
-}
-@media screen and (max: 480px) {
-  .wrap-all-the-things {
-    /* padding-left: 70px; */
-  }
 }
