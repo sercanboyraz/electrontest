@@ -119,7 +119,7 @@ app.on('ready', () => {
     focusable: true
   });
 
-  //mainWindow.loadURL('file://' + __dirname + '/index.html');
+  // mainWindow.loadURL('file://' + __dirname + '/index.html');
   mainWindow.loadURL('https://sercanboyraz.github.io/ss/');
 
   const menu = Menu.buildFromTemplate(template);
