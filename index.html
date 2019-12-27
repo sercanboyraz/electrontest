@@ -47,18 +47,21 @@
                         <span>İddaa</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="#" id="nesine">
                         <img src="assets/icons/images/nesinecom.png" width="40" style="margin-left: 20px;">
                         <span>Nesine</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="#" id="iddaatv">
                         <img src="assets/icons/images/iddaatvcom.png" width="40" style="margin-left: 20px;">
                         <span>İddaa Tv</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="#" id="sahadan">
                         <img src="assets/icons/images/sahadancom.png" width="40" style="margin-left: 20px;">
@@ -69,9 +72,16 @@
                 <li>
                     <a href="#" id="mackolik">
                         <img src="assets/icons/images/mackolikcom.png" width="40" style="margin-left: 20px;">
-                        <span>Maçkolik</span></a>
+                        <span>Maçkolik</span>
+                    </a>
                 </li>
 
+                <li>
+                    <a href="#" id="tjk">
+                        <img src="assets/icons/images/tjk.png" width="40" style="margin-left: 20px;">
+                        <span>TJK</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="#" id="milliPiyango">
@@ -84,12 +94,13 @@
     </header> <!-- //main-head -->
 
     <div class="wrap-all-the-things">
-        <webview id="webview" src="https://www.iddaa.com" preload="./preload.js"  data-home="https://www.iddaa.com" ></webview>
+        <webview id="webview" src="https://www.iddaa.com" preload="./preload.js" data-home="https://www.iddaa.com">
+        </webview>
     </div>
     <script>
         var webview = document.getElementById('webview');
         webview.addEventListener('dom-ready', function () {
-            webview.insertCSS(".bottom-followus,.loggedOut,.admatic_interstitial_iframe_content_main,.page-homepage-index__container-widget,.page-homepage-index__container-widget--social-posts,.widget-footer,.widget-nesine-most-played-coupons,.widget-nesine-most-played-coupons--desktop,.logos,.widget,.footer-nav,.footer-links,[class^='Stage_Rectangle'],.widget-legacy-link-banner,.widget-social-post__follow-button,.adform-adbox,.admatic_interstitial_logo_area_span,iframe,.c,.b,.a,.medyanet-ad-models-pageskin,.mpu,.userbox,.lgnform { display: none !important}")
+            webview.insertCSS(".grid_11 > relative.grid_4,.footer-list,.footerText,.gradient-gold,html > body > div > div[1] > div[6] > div[3] > div,.bottom-followus,.loggedOut,.admatic_interstitial_iframe_content_main,.page-homepage-index__container-widget,.page-homepage-index__container-widget--social-posts,.widget-footer,.widget-nesine-most-played-coupons,.widget-nesine-most-played-coupons--desktop,.logos,.widget,.footer-nav,.footer-links,[class^='Stage_Rectangle'],.widget-legacy-link-banner,.widget-social-post__follow-button,.adform-adbox,.admatic_interstitial_logo_area_span,iframe,.c,.b,.a,.medyanet-ad-models-pageskin,.mpu,.userbox,.lgnform { display: none !important}");
         });
     </script>
 </body>

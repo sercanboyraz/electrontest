@@ -9,6 +9,7 @@ onload = () => {
   milliPiyangoButton();
   mackolikButton();
   iddaatvbutton();
+  tjkbutton();
 };
 
 function doLayout() {

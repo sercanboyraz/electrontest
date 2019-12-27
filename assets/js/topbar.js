@@ -46,3 +46,10 @@ function iddaatvbutton() {
     navigateTo("http://iddaatv.iddaa.com.tr/");
   };
 }
+
+function tjkbutton() {
+  document.querySelector('#tjk').onclick = () => {
+    navigateTo("https://www.tjk.org/");
+  };
+}
+
