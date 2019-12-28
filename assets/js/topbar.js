@@ -29,8 +29,8 @@ function sahadanButton() {
   };
 }
 
-function milliPiyangoButton() {
-  document.querySelector('#milliPiyango').onclick = () => {
+function sayisallotoButton() {
+  document.querySelector('#sayisalloto').onclick = () => {
     navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_sayisal.php");
   };
 }
@@ -53,3 +53,30 @@ function tjkbutton() {
   };
 }
 
+
+function onnumaraButton() {
+  document.querySelector('#onnumara').onclick = () => {
+    navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_onnumara.php");
+  };
+}
+
+
+function sanstopuButton() {
+  document.querySelector('#sanstopu').onclick = () => {
+    navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_sanstopu.php");
+  };
+}
+
+
+function superlotoButton() {
+  document.querySelector('#superloto').onclick = () => {
+    navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_superloto.php");
+  };
+}
+
+
+function piyangoButton() {
+  document.querySelector('#piyango').onclick = () => {
+    navigateTo("http://www.millipiyango.gov.tr/sonuclar/_cs_piyango.php");
+  };
+}

@@ -2,14 +2,17 @@ window.onresize = doLayout;
 
 onload = () => {
   doLayout();
-  // Topbar functions
   iddaaButton();
   sahadanButton();
   nesineButton();
-  milliPiyangoButton();
+  sayisallotoButton();
   mackolikButton();
   iddaatvbutton();
   tjkbutton();
+  onnumaraButton();
+  sanstopuButton();
+  superlotoButton();
+  piyangoButton();
 };
 
 function doLayout() {
