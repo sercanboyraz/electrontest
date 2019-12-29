@@ -1,6 +1,7 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const Store = require('./store.js');
 
 const path = require('path');
 const fs = require("fs");
@@ -92,12 +93,7 @@ let initPath;
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', () => {
-  initPath = path.join(app.getPath('userData'), "init.json");
-
-  try {
-    data = JSON.parse(fs.readFileSync(initPath, 'utf8'));
-  }
-  catch (e) { }
+  let { username, password, id, phoneNumber, licenseCount, name, surname } = store.get('usersinfo');
 
   mainWindow = new BrowserWindow({
     // width: 1024,
@@ -111,7 +107,6 @@ app.on('ready', () => {
       zoomFactor: 1.0,
       blinkFeatures: 'OverlayScrollbars',
       nodeIntegration: false,
-      preload: path.join(__dirname, 'renderer.js'),
     },
     // fullscreenable: true,
     // simpleFullscreen: true,
@@ -119,13 +114,12 @@ app.on('ready', () => {
     focusable: true
   });
 
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
-  // mainWindow.loadURL('https://sercanboyraz.github.io/ss/');
+  // mainWindow.loadURL('file://' + __dirname + '/index.html?name=username&password=userpassword');
+  mainWindow.loadURL('https://sercanboyraz.github.io/ss/');
+  store.set('usersinfo', { username, password, id, phoneNumber, licenseCount, name, surname });
 
   const menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(null);
-
-  // mainWindow.webContents.openDevTools()
+  Menu.setApplicationMenu(menu);
 });
 
 // Quit when all windows are closed.

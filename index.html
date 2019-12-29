@@ -6,6 +6,7 @@
     <!-- <link rel="stylesheet" href="assets/css/no-topbar.css"> -->
     <script src="assets/js/webview.js"></script>
     <script src="assets/js/topbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" /> -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
 </head>
@@ -79,28 +80,28 @@
                         <span>Sayısal Loto</span>
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="#" id="onnumara">
                         <img src="assets/icons/images/millipiyangocom.png" width="40" style="margin-left: 20px;">
                         <span>On Numara</span>
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="#" id="sanstopu">
                         <img src="assets/icons/images/millipiyangocom.png" width="40" style="margin-left: 20px;">
                         <span>Sans Topu</span>
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="#" id="superloto">
                         <img src="assets/icons/images/millipiyangocom.png" width="40" style="margin-left: 20px;">
                         <span>Super Loto</span>
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="#" id="piyango">
                         <img src="assets/icons/images/millipiyangocom.png" width="40" style="margin-left: 20px;">
@@ -112,10 +113,14 @@
     </header> <!-- //main-head -->
 
     <div class="wrap-all-the-things">
-        <webview id="webview" src="https://www.iddaa.com" preload="./preload.js" data-home="https://www.iddaa.com">
+        <webview id="webview" src="https://www.iddaa.com" data-home="https://www.iddaa.com">
         </webview>
     </div>
     <script>
+        $(document).ready(function () { 
+            
+         });
+
         var webview = document.getElementById('webview');
         webview.addEventListener('dom-ready', function () {
             webview.insertCSS(".relative,.grid_4,.footer-list,.footerText,.gradient-gold,.bottom-followus,.loggedOut,.admatic_interstitial_iframe_content_main,.page-homepage-index__container-widget,.page-homepage-index__container-widget--social-posts,.widget-footer,.widget-nesine-most-played-coupons,.widget-nesine-most-played-coupons--desktop,.logos,.widget,.footer-nav,.footer-links,[class^='Stage_Rectangle'],.widget-legacy-link-banner,.widget-social-post__follow-button,.adform-adbox,.admatic_interstitial_logo_area_span,iframe,.c,.b,.a,.medyanet-ad-models-pageskin,.mpu,.userbox,.lgnform { display: none !important}");
