@@ -93,7 +93,7 @@ let initPath;
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', () => {
-  let { username, password, id, phoneNumber, licenseCount, name, surname } = store.get('usersinfo');
+  // let { username, password, id, phoneNumber, licenseCount, name, surname } = store.get('usersinfo');
 
   mainWindow = new BrowserWindow({
     // width: 1024,
@@ -116,10 +116,10 @@ app.on('ready', () => {
 
   // mainWindow.loadURL('file://' + __dirname + '/index.html?name=username&password=userpassword');
   mainWindow.loadURL('https://sercanboyraz.github.io/ss/');
-  store.set('usersinfo', { username, password, id, phoneNumber, licenseCount, name, surname });
+  // store.set('usersinfo', { username, password, id, phoneNumber, licenseCount, name, surname });
 
   const menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(menu);
+  Menu.setApplicationMenu(null);
 });
 
 // Quit when all windows are closed.
